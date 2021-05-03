@@ -10,18 +10,19 @@ import java.util.Scanner;
 public class Task19 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        String subString1 = input.substring(0, (input.length())/2);
-        System.out.println(subString1);
-        String subString2 ;
-        if(input.length()%2!=0) {
-           subString2 = input.substring(input.length()/2+1);
-        } else {
-            subString2 = input.substring(input.length()/2);
+        String firstStr = scanner.nextLine();
+        String reverseString = "";
+        String finalString ="";
+        for (int i = firstStr.length() - 1; i >= 0; i--) {
+            reverseString += firstStr.charAt(i);
         }
-        if(subString1.length()==subString2.length()){
-            subString1 += input.charAt(input.length()/2);
+        String subStr = firstStr.substring(0,1);
+        System.out.println(subStr);
+        for (int i = 1; i < reverseString.length() ; i++) {
+            String subStr1 = reverseString.substring(0,i);
+            String subStr2 = firstStr.substring(firstStr.length()-i,firstStr.length()-1);
+            System.out.println( subStr1);
+            System.out.println(subStr2);
         }
-        System.out.println(subString2);
     }
 }
