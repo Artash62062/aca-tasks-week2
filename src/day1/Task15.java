@@ -12,12 +12,16 @@ public class Task15 {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         int max = 0;
+        int min = 0;
         while(num!=0) {
             if(num >max) {
+                min =max;
                 max = num;
+            } else if(num > min) {
+                min = num;
             }
             num = scanner.nextInt();
         }
-        System.out.println(max);
+        System.out.println(min);
     }
 }
