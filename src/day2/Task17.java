@@ -15,30 +15,30 @@ public class Task17 {
         boolean sizeValid = false;
         boolean symbolValid = false;
         boolean letterValid = false;
-        for (int i = 0; i < pass.length() ; i++) {
-            if(((int)pass.charAt(i)<=122 && (int) pass.charAt(i)>=97)&& ((int)pass.charAt(i)<=90 && (int) pass.charAt(i)>=65)) {
+        for (int i = 0; i < pass.length(); i++) {
+            if (((int) pass.charAt(i) <= 122 && (int) pass.charAt(i) >= 97) && ((int) pass.charAt(i) <= 90 && (int) pass.charAt(i) >= 65)) {
                 letterValid = true;
                 break;
             }
         }
-        if(pass.length()>=6 && pass.length()<=16) {
-                sizeValid = true;
+        if (pass.length() >= 6 && pass.length() <= 16) {
+            sizeValid = true;
         }
 
-        for (int i = 0; i < pass.length() ; i++) {
-            if(((int)pass.charAt(i)<=57 && (int) pass.charAt(i)>=48)){
+        for (int i = 0; i < pass.length(); i++) {
+            if (((int) pass.charAt(i) <= 57 && (int) pass.charAt(i) >= 48)) {
                 numValid = true;
                 break;
             }
         }
-        for (int i = 0; i < pass.length() ; i++) {
-            if((int)pass.charAt(i)==35 || (int) pass.charAt(i)==36 || (int) pass.charAt(i)==64) {
+        for (int i = 0; i < pass.length(); i++) {
+            if ((int) pass.charAt(i) == 35 || (int) pass.charAt(i) == 36 || (int) pass.charAt(i) == 64) {
                 symbolValid = true;
                 break;
             }
         }
 
-        if(numValid && letterValid && sizeValid && symbolValid) {
+        if (numValid && letterValid && sizeValid && symbolValid) {
             System.out.println("Password is Valid");
         } else {
             System.out.println("Password is Invalid");
