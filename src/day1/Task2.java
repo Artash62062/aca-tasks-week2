@@ -7,8 +7,10 @@ package day1;
  */
 public class Task2 {
     public static void main(String[] args) {
-        for(int i =2;i<20;i+=2) {
+        int i=2;
+        while (i<20) {
             System.out.println(i);
+            i+=2;
         }
     }
 }

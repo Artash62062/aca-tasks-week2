@@ -14,8 +14,11 @@ public class Task7 {
         if(inputNum%2!=0) {
             inputNum--;
         }
-        for (int i = inputNum; i >1; i-=2) {
+        int i=inputNum;
+        while (i>1) {
             System.out.println(i);
+            i-=2;
         }
+
     }
 }

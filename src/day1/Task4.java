@@ -12,11 +12,13 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
         int inputNum = scanner.nextInt();
         int smallest= 1;
-        for (int i = 2;i<= inputNum ; i++) {
+        int i=2;
+        while (i<=inputNum) {
             if(inputNum % i ==0) {
                 smallest = i;
-                 break;
+                break;
             }
+            i++;
         }
         System.out.println(smallest);
     }

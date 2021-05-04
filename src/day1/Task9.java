@@ -14,8 +14,10 @@ public class Task9 {
         Scanner scanner = new Scanner(System.in);
         int num = scanner .nextInt();
         int answer=0;
-        for (int i=0;Math.pow(2,i)<=num;i++){
+        int i=0;
+        while (Math.pow(2,1)<=num) {
             answer =i;
+            i++;
         }
         System.out.println(++answer);
     }

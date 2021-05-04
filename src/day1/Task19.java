@@ -12,17 +12,31 @@ public class Task19 {
         Scanner scanner = new Scanner(System.in);
         String firstStr = scanner.nextLine();
         String reverseString = "";
-        String finalString ="";
+        String finalString = "";
         for (int i = firstStr.length() - 1; i >= 0; i--) {
             reverseString += firstStr.charAt(i);
         }
-        String subStr = firstStr.substring(0,1);
-        System.out.println(subStr);
-        for (int i = 1; i < reverseString.length() ; i++) {
-            String subStr1 = reverseString.substring(0,i);
-            String subStr2 = firstStr.substring(firstStr.length()-i,firstStr.length()-1);
-            System.out.println( subStr1);
-            System.out.println(subStr2);
+        if (reverseString.equals(firstStr)) {
+            System.out.println(firstStr);
+        } else {
+            int counter = 0;
+
+            for (int i = 1; i < reverseString.length(); i++) {
+                String subStr1 = reverseString.substring(0, i);
+                String subStr2 = firstStr.substring(firstStr.length() - i);
+                System.out.println(subStr1);
+                System.out.println(subStr2);
+                if (subStr1.equals(subStr2)) {
+                    counter++;
+                } else {
+                    break;
+                }
+                System.out.println(counter);
+            }
+            String subString = reverseString.substring(counter);
+            System.out.println(subString);
+            finalString = firstStr + subString;
+            System.out.println(finalString);
         }
     }
 }

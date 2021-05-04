@@ -12,8 +12,10 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
         int inputNum;
         inputNum = scanner.nextInt();
-        for (int i =1 ; Math.pow(i,2) < inputNum ; i++) {
+        int i=1;
+        while(Math.pow(i,2)<inputNum) {
             System.out.println((int)Math.pow(i,2));
+            i++;
         }
     }
 }

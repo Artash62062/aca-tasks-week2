@@ -7,11 +7,13 @@ package day1;
  */
 public class Task10 {
     public static void main(String[] args) {
-        for (int i = 32; i <= 122; i++) {
+        int i=32;
+        while (i<=122) {
             System.out.print((char) i);
             if((i-2)%10==0){
                 System.out.print("\n");
             }
+            i++;
         }
     }
 }

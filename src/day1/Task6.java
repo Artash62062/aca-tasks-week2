@@ -12,8 +12,10 @@ public class Task6 {
         int inputNum;
         Scanner scanner = new Scanner(System.in);
         inputNum = scanner.nextInt();
-        for (int i = inputNum; i >0 ; i--) {
+        int i=inputNum;
+        while (i>0) {
             System.out.println(i);
+            i--;
         }
     }
 }
