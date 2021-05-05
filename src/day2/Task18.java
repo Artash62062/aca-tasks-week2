@@ -17,8 +17,8 @@ public class Task18 {
                 for (int j = 0; j <string2.length() ; j++) {
                     if(string1.charAt(i)==string2.charAt(j)){
                         string2 = removeCharFromString(string1.charAt(i),string2);
-                        string1 = removeCharFromString(string1.charAt(i),string1);
                         count++;
+                        break;
                     }
                 }
             }
